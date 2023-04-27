@@ -25,7 +25,14 @@ const timezone = moment.tz.guess();
 
 const latitude = args.n || -args.s
 
+const longitude = args.e || -args.w
+
+const day = args.d || 1
+
 var urlBuilder = "https://api.open-meteo.com/v1/forecast?latitude=";
+
+var urlBuilder = urlBuilder + latitude + '&longitude=' + longitude + 
+                 '&daily=precipitation_hours&timezone=' + timezone
 
 
 
