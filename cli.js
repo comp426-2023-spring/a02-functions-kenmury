@@ -43,6 +43,8 @@ var days = "tomorrow."
 if (day == 0) {days = "today."}
 if (day > 1) {days = `in ${day} days`}
 
+if (data['daily']['precipitation_hours'][day] > 0) {
+    console.log(`You might need your galoshes ${days}`);
+}
 
 
-console.log(data['daily']);
