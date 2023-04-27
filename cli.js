@@ -38,9 +38,9 @@ const response = await fetch(urlBuilder)
 
 const data = await response.json()
 
-var days = "tomorrow."
+var days = "tomorrow"
 
-if (day == 0) {days = "today."}
+if (day == 0) {days = "today"}
 if (day > 1) {days = `in ${day} days`}
 
 if (data['daily']['precipitation_hours'][day] > 0) {
@@ -53,5 +53,5 @@ if (data['daily']['precipitation_hours'][day] == 0) {
 
 if (args.j) {
     console.log(data)
-    process.exit()
+    process.exit(1)
 }
