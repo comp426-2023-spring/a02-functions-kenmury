@@ -3,9 +3,11 @@
 // Check dependencies 
 
 import minimist from 'minimist'
-import node-fetch from 'node-fetch'
-import moment-timezone from 'moment-timezone'
+import fetch from 'node-fetch'
+import moment from 'moment-timezone'
+
+var args = minimist(process.argv.slice(2))
 
 
 
-console.log("hello");
+console.log(args);
