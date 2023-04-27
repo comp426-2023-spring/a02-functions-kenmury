@@ -21,7 +21,8 @@ if (args.h) {
     process.exit(0);
 }
 
+const timezone = moment.tz.guess();
 
 
 
-// console.log(args);
+console.log(timezone);
