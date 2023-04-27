@@ -44,13 +44,14 @@ if (day == 0) {days = "today."}
 if (day > 1) {days = `in ${day} days`}
 
 if (data['daily']['precipitation_hours'][day] > 0) {
-    console.log(`You might need your galoshes ${days}`);
+    console.log(`${days}`);
 }
 
 if (data['daily']['precipitation_hours'][day] == 0) {
-    console.log(`You probably won't need your galoshes ${days}`);
+    console.log(`${days}`);
 }
 
 if (args.j) {
     console.log(data)
+    process.exit()
 }
