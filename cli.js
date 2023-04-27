@@ -25,9 +25,9 @@ if (args.h) {
 
 const timezone = args.z || moment.tz.guess();
 
-const latitude = args.n || -args.s
+const latitude = args.n || -args.s || 0
 
-const longitude = args.e || -args.w
+const longitude = args.e || -args.w || 0
 
 const day = args.d || 1
 
