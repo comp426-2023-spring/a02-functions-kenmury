@@ -21,6 +21,8 @@ if (args.h) {
     process.exit(0);
 }
 
+
+
 const timezone = args.z || moment.tz.guess();
 
 const latitude = args.n || -args.s
@@ -38,6 +40,11 @@ const response = await fetch(urlBuilder)
 
 const data = await response.json()
 
+if (args.j) {
+    console.log(data)
+    process.exit(1)
+}
+
 var days = "tomorrow"
 
 if (day == 0) {days = "today"}
@@ -51,7 +58,3 @@ if (data['daily']['precipitation_hours'][day] == 0) {
     console.log(`${days}`);
 }
 
-if (args.j) {
-    console.log(data)
-    process.exit(1)
-}
