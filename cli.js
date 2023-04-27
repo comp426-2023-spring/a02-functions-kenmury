@@ -21,13 +21,22 @@ if (args.h) {
     process.exit(0);
 }
 
+if (!args.n && !args.s) {
+    console.log("Latitude must be in range.")
+    process.exit(0);
+}
+
+if (!args.e && !args.w) {
+    console.log("Longitude must be in range.")
+    process.exit(0);
+}
 
 
 const timezone = args.z || moment.tz.guess();
 
-const latitude = args.n || -args.s || 0
+const latitude = args.n || -args.s
 
-const longitude = args.e || -args.w || 0
+const longitude = args.e || -args.w
 
 const day = args.d || 1
 
