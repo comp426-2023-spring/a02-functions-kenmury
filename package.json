@@ -1,0 +1,11 @@
+{
+  "name": "a02-kenmury",
+  "version": "0.0.1",
+  "description": "This assignment will help you learn to create an installable Node.js command line utility.",
+  "main": "cli.js",
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "author": "@Kenmury",
+  "license": "GPL-3.0-or-later"
+}
