@@ -51,3 +51,6 @@ if (data['daily']['precipitation_hours'][day] == 0) {
     console.log(`You probably won't need your galoshes ${days}`);
 }
 
+if (args.j) {
+    console.log(data)
+}
