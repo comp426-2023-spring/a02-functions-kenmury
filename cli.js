@@ -31,7 +31,6 @@ if (!args.e && !args.w) {
     process.exit(0);
 }
 
-
 const timezone = args.z || moment.tz.guess();
 
 const latitude = args.n || -args.s
@@ -70,5 +69,3 @@ if (data['daily']['precipitation_hours'][day] > 0) {
 if (data['daily']['precipitation_hours'][day] == 0) {
     console.log(`You will not need your galoshes ${days}`);
 }
-
-
