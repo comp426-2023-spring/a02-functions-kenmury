@@ -23,6 +23,11 @@ if (args.h) {
 
 const timezone = moment.tz.guess();
 
+const latitude = args.n || -args.s
+
+var urlBuilder = "https://api.open-meteo.com/v1/forecast?latitude=";
 
 
-console.log(timezone);
+
+
+console.log(latitude);
