@@ -40,7 +40,7 @@ const longitude = args.e || -args.w;
 
 var day = 1;
 
-if (args.d !== 'undefined') {
+if (!(typeof args.d == 'undefined')) {
     day = args.d
 }
 
