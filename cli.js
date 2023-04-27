@@ -38,6 +38,10 @@ const response = await fetch(urlBuilder)
 
 const data = await response.json()
 
+var days = "tomorrow."
+
+if (day == 0) {days = "today."}
+if (day > 1) {days = `in ${day} days`}
 
 
 
