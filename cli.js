@@ -36,9 +36,13 @@ const timezone = args.z || moment.tz.guess();
 
 const latitude = args.n || -args.s
 
-const longitude = args.e || -args.w
+const longitude = args.e || -args.w;
 
-const day = args.d || 1
+var day = 1;
+
+if (args.d !== 'undefined') {
+    day = args.d
+}
 
 var urlBuilder = "https://api.open-meteo.com/v1/forecast?latitude=";
 
@@ -66,4 +70,5 @@ if (data['daily']['precipitation_hours'][day] > 0) {
 if (data['daily']['precipitation_hours'][day] == 0) {
     console.log(`${days}`);
 }
+
 
