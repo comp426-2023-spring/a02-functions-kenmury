@@ -34,11 +34,11 @@ var urlBuilder = "https://api.open-meteo.com/v1/forecast?latitude=";
 var urlBuilder = urlBuilder + latitude + '&longitude=' + longitude + 
                  '&daily=precipitation_hours&timezone=' + timezone
 
-const respone = await fetch(urlBuilder)
+const response = await fetch(urlBuilder)
 
 const data = await response.json()
 
 
 
 
-console.log(latitude);
+console.log(data);
