@@ -36,6 +36,9 @@ var urlBuilder = urlBuilder + latitude + '&longitude=' + longitude +
 
 const respone = await fetch(urlBuilder)
 
+const data = await response.json()
+
+
 
 
 console.log(latitude);
